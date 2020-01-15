@@ -1,7 +1,7 @@
-import Method from "../method/method";
+import RequestMethod from "../method/method";
 
-export default interface Line<P extends string, M extends Method> {
+export default interface Line<Path extends string, Method extends RequestMethod> {
 
-    method : M;
-    path : P;
+    method : Method;
+    path : Path;
 }

@@ -1,8 +1,18 @@
 import Line from "./line/line";
-import Method from "./method/method";
+import RequestMethod from "./method/method";
+import HeaderInterface from "../header/header";
+import BodyInterface from "../body/body";
 
-export default interface Request<M extends Method, P extends string, H extends Record<string, string>, B> extends Line<P, M> {
+export default interface Request<
+    Method extends RequestMethod,
+    Path extends string,
+    Header extends Record<string, string>,
+    Body
+> extends Line<Path, Method>, HeaderInterface<Header>, BodyInterface<Body> {
 
-    header : H;
-    body : B;
 }
+
+
+// class Class implements Request<Method.POST, {}, {}, {}>{
+//
+// }

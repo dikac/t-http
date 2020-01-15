@@ -1,8 +1,12 @@
 import Line from "./line/line";
-import Method from "../request/method/method";
+import HeaderInterface from "../header/header";
+import BodyInterface from "../body/body";
 
-export default interface Response<B, C extends number, M extends string, H extends Record<string, string> = {}>  extends Line<C, M> {
+export default interface Response<
+    Code extends number,
+    Message extends string,
+    Header extends Record<string, string>,
+    Body
+>  extends Line<Code, Message>, HeaderInterface<Header>, BodyInterface<Body> {
 
-    header : H;
-    body : B;
 }

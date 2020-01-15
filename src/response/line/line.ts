@@ -1,5 +1,6 @@
-export default interface Line<C extends number, M extends string> {
+import MessageInterface from "@dikac/t-message/message";
 
-    message : M;
-    code : C;
+export default interface Line<Code extends number, Message extends string> extends MessageInterface<Message> {
+
+    code : Code;
 }

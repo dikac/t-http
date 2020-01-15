@@ -1,13 +1,18 @@
-import Method from "./method/method";
+import RequestMethod from "./method/method";
 import Request from "./request";
 
-export default class Standard<M extends Method, P extends string, H extends Record<string, string>, B> implements Request<M,P,H,B> {
+export default class Standard<
+    Method extends RequestMethod,
+    Path extends string,
+    Header extends Record<string, string>,
+    Body
+> implements Request<Method, Path, Header, Body> {
 
     constructor(
-        public method : M,
-        public path : P,
-        public body : B,
-        public header : H
+        public method : Method,
+        public path : Path,
+        public header : Header,
+        public body : Body,
     ) {
 
     }
