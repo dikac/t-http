@@ -11,8 +11,3 @@ export default interface Request<
 > extends Line<Path, Method>, HeaderInterface<Header>, BodyInterface<Body> {
 
 }
-
-
-// class Class implements Request<Method.POST, {}, {}, {}>{
-//
-// }
