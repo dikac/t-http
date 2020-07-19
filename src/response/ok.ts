@@ -1,6 +1,6 @@
 import Response from "./response";
 import StandardCode from "./codes/standard";
-import Optional from "../header/infer/optional";
+import Optional from "../header/value/value";
 import Standard from "./standard";
 
 export default function Ok<Body, Header extends Record<string, string>>

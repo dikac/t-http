@@ -1,3 +1,3 @@
-export default interface Body<Body> {
+export default interface Body<Body = unknown> {
     body: Body;
 }

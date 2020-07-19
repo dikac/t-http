@@ -4,10 +4,10 @@ import HeaderInterface from "../header/header";
 import BodyInterface from "../body/body";
 
 export default interface Request<
-    Method extends RequestMethod,
-    Path extends string,
-    Header extends Record<string, string>,
-    Body
+    Method extends RequestMethod = RequestMethod,
+    Path extends string = string,
+    Header extends  Record<string, string> = Record<string, string>,
+    Body = unknown
 > extends Line<Path, Method>, HeaderInterface<Header>, BodyInterface<Body> {
 
 }
