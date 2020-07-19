@@ -1,17 +1,23 @@
 import Response from "./response";
-import Standard from "./codes/standard";
+import StandardCode from "./codes/standard";
 import Optional from "../header/infer/optional";
+import Standard from "./standard";
+
+export default function Ok<Body, Header extends Record<string, string>>
+    (body : Body, header : Header) : Response<200, string, Header, Body>;
+
+
+export default function Ok<Body>
+    (body : Body) : Response<200, string, {}, Body>;
 
 export default function Ok<
     Body,
-    Header extends Record<string, string>|undefined
->(body : Body, header : Header) : Response<200, string, Optional<Header>, Body> {
+    Header extends Record<string, string>
+>(
+    body : Body,
+    header ?: Header
+) : Response<200, string, Header|{}, Body> {
 
-    return {
-        message : Standard()["200"],
-        body : body,
-        code : 200,
-        header : <Optional<Header>>(header ? header : {})
-    }
+    return new Standard(200, StandardCode(200), header ? header : {}, body);
 }
 
