@@ -1,4 +1,4 @@
-import Ok from "../../dist/response/ok";
+import InternalServerError from "../../dist/response/internal-server-error";
 import Standard from "../../dist/response/message/message/standard";
 
 it("force console log", () => { spyOn(console, 'log').and.callThrough();});
@@ -9,7 +9,7 @@ describe("compiler compatible", function() {
 
     describe("header", function() {
 
-        let response = Ok('data', {etag:'etag data'});
+        let response = InternalServerError('data', {etag:'etag data'});
 
 
         let string : string;
@@ -24,7 +24,7 @@ describe("compiler compatible", function() {
 
     describe("header", function() {
 
-        let response = Ok('data');
+        let response = InternalServerError('data');
 
         let string : string;
         let object : object;
@@ -43,23 +43,23 @@ describe("validate data", function() {
 
     it("header", function() {
 
-        let response = Ok('data', {etag:'etag data'});
+        let response = InternalServerError('data', {etag:'etag data'});
 
         expect(response.header.etag).toBe('etag data');
         expect(response.body).toBe('data');
-        expect(response.code).toBe(200);
-        expect(response.message).toBe(Standard(200));
+        expect(response.code).toBe(500);
+        expect(response.message).toBe(Standard(500));
 
     });
 
     it("header", function() {
 
-        let response = Ok('data');
+        let response = InternalServerError('data');
 
         expect(response.header).toEqual({});
         expect(response.body).toBe('data');
-        expect(response.code).toBe(200);
-        expect(response.message).toBe(Standard(200));
+        expect(response.code).toBe(500);
+        expect(response.message).toBe(Standard(500));
 
     });
 });

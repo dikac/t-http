@@ -11,9 +11,9 @@
     Object.defineProperty(exports, "__esModule", { value: true });
     const standard_1 = require("./message/message/standard");
     const standard_2 = require("./standard");
-    function Ok(body, header) {
-        return new standard_2.default(200, standard_1.default(200), header ? header : {}, body);
+    function InternalServerError(body, header) {
+        return new standard_2.default(500, standard_1.default(500), header ? header : {}, body);
     }
-    exports.default = Ok;
+    exports.default = InternalServerError;
 });
-//# sourceMappingURL=ok.js.map
+//# sourceMappingURL=internal-server-error.js.map

@@ -1,5 +1,5 @@
 import Response from "./response";
-import StandardCode from "./codes/standard";
+import StandardCode from "./message/message/standard";
 import Optional from "../header/value/value";
 import Standard from "./standard";
 
