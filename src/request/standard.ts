@@ -1,4 +1,4 @@
-import RequestMethod from "./method/method";
+import RequestMethod from "./method/method/method";
 import Request from "./request";
 
 export default class Standard<
