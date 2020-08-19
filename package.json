@@ -1,11 +1,12 @@
 {
   "name": "@dikac/t-http",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "description": "Typescript http",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
-    "@dikac/t-message": "^0.8.2",
-    "@dikac/t-number": "^0.15.1"
+    "@dikac/t-code": "^0.0.2",
+    "@dikac/t-message": "^0.8.6",
+    "@dikac/t-number": "^0.15.7"
   },
   "devDependencies": {
     "@types/jasmine": "^3.5.12",
