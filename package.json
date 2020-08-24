@@ -1,21 +1,23 @@
 {
   "name": "@dikac/t-http",
-  "version": "0.13.1",
+  "version": "0.13.2",
   "description": "Typescript http",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
-    "@dikac/t-code": "^0.0.2",
-    "@dikac/t-message": "^0.8.6",
-    "@dikac/t-number": "^0.15.7"
+    "@dikac/t-code": "^0.0.3",
+    "@dikac/t-enum": "^0.9.16",
+    "@dikac/t-message": "^0.8.8",
+    "@dikac/t-number": "^0.15.7",
+    "@dikac/t-object": "^0.31.1",
+    "@dikac/t-string": "^0.12.8"
   },
   "devDependencies": {
-    "@types/jasmine": "^3.5.12",
+    "@types/jasmine": "^3.5.13",
     "cpy-cli": "^3.1.1",
     "jasmine": "^3.6.1",
     "jasmine-ts-console-reporter": "^3.1.1",
     "json-properties-remover": "^0.1.2",
     "mkdirp": "^1.0.4",
-    "move-cli": "^1.2.1",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
     "ts-cleaner": "^1.0.5",

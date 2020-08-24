@@ -1,0 +1,1 @@
+{"version":3,"file":"get.js","sourceRoot":"","sources":["../../src/request/get.ts"],"names":[],"mappings":";;;;;;;;;;;IACA,yCAAkC;IAClC,mDAA4C;IAM5C,SAAwB,GAAG,CAKvB,IAAW,EACX,IAAW,EACX,MAAgB;QAGhB,OAAO,IAAI,kBAAQ,CAAC,gBAAM,CAAC,GAAG,EAAE,IAAI,EAAE,MAAM,CAAC,CAAC,CAAC,MAAM,CAAC,CAAC,CAAC,EAAE,EAAE,IAAI,CAAC,CAAC;IACtE,CAAC;IAXD,sBAWC"}
