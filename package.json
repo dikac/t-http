@@ -1,18 +1,18 @@
 {
   "name": "@dikac/t-http",
-  "version": "0.13.2",
+  "version": "0.13.3",
   "description": "Typescript http",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
     "@dikac/t-code": "^0.0.3",
-    "@dikac/t-enum": "^0.9.16",
-    "@dikac/t-message": "^0.8.8",
-    "@dikac/t-number": "^0.15.7",
-    "@dikac/t-object": "^0.31.1",
-    "@dikac/t-string": "^0.12.8"
+    "@dikac/t-enum": "^0.9.17",
+    "@dikac/t-message": "^0.8.9",
+    "@dikac/t-number": "^0.15.8",
+    "@dikac/t-object": "^0.32.0",
+    "@dikac/t-string": "^0.12.9"
   },
   "devDependencies": {
-    "@types/jasmine": "^3.5.13",
+    "@types/jasmine": "^3.5.14",
     "cpy-cli": "^3.1.1",
     "jasmine": "^3.6.1",
     "jasmine-ts-console-reporter": "^3.1.1",

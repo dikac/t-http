@@ -1,6 +1,6 @@
 import RequestInterface from "../request";
 import String from "@dikac/t-string/boolean/string";
-import Property from "@dikac/t-object/property/boolean/property";
+import Property from "@dikac/t-object/property/boolean/exists";
 import Object_ from "@dikac/t-object/boolean/object";
 import Enum from "@dikac/t-enum/boolean/enum";
 import Method from "../method/method/method";

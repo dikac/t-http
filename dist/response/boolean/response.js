@@ -4,12 +4,12 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "@dikac/t-object/property/boolean/property", "@dikac/t-number/boolean/number", "@dikac/t-code/boolean/code", "@dikac/t-message/boolean/message", "@dikac/t-string/boolean/string", "@dikac/t-object/boolean/object"], factory);
+        define(["require", "exports", "@dikac/t-object/property/boolean/exists", "@dikac/t-number/boolean/number", "@dikac/t-code/boolean/code", "@dikac/t-message/boolean/message", "@dikac/t-string/boolean/string", "@dikac/t-object/boolean/object"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const property_1 = require("@dikac/t-object/property/boolean/property");
+    const exists_1 = require("@dikac/t-object/property/boolean/exists");
     const number_1 = require("@dikac/t-number/boolean/number");
     const code_1 = require("@dikac/t-code/boolean/code");
     const message_1 = require("@dikac/t-message/boolean/message");
@@ -22,7 +22,7 @@
         if (!message_1.default(value) || !string_1.default(value.message)) {
             return false;
         }
-        if (!property_1.default(value, 'header') || !object_1.default(value.header)) {
+        if (!exists_1.default(value, 'header') || !object_1.default(value.header)) {
             return false;
         }
         return true;
