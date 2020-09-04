@@ -4,12 +4,12 @@
   "description": "Typescript http",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
-    "@dikac/t-code": "^0.0.3",
+    "@dikac/t-code": "0.1.0",
     "@dikac/t-enum": "^0.9.21",
     "@dikac/t-message": "^0.10.1",
     "@dikac/t-number": "^0.15.11",
-    "@dikac/t-object": "^0.32.4",
-    "@dikac/t-string": "^0.13.0"
+    "@dikac/t-object": "^0.32.5",
+    "@dikac/t-string": "^0.13.1"
   },
   "devDependencies": {
     "@types/jasmine": "^3.5.14",
