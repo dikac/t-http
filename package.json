@@ -1,6 +1,6 @@
 {
   "name": "@dikac/t-http",
-  "version": "0.13.6",
+  "version": "0.13.7",
   "description": "Typescript http",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
@@ -8,7 +8,7 @@
     "@dikac/t-enum": "^0.9.21",
     "@dikac/t-message": "^0.10.1",
     "@dikac/t-number": "^0.15.11",
-    "@dikac/t-object": "^0.32.5",
+    "@dikac/t-object": "^0.33.0",
     "@dikac/t-string": "^0.13.1"
   },
   "devDependencies": {
