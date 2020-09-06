@@ -9,11 +9,13 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    /**
-     * check if status code {@param code} is part of class code {@param prefix}
-     */
     const lower_1 = require("@dikac/t-number/boolean/lower");
     const greater_1 = require("@dikac/t-number/boolean/greater");
+    /**
+     * check if {@param code} is part of redirection http status code (3xx)
+     *
+     * @param code
+     */
     function Redirection(code) {
         return greater_1.default(code, 300, true) && lower_1.default(code, 400, false);
     }

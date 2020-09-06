@@ -15,8 +15,14 @@
     const successful_1 = require("./successful");
     const informational_1 = require("./informational");
     const redirection_1 = require("./redirection");
-    function ClassCode(code, class_) {
-        switch (class_) {
+    /**
+     * check if {@param code} is part of {@param status} http status code class
+     *
+     * @param code
+     * @param status
+     */
+    function ClassCode(code, status) {
+        switch (status) {
             case class_1.default.SUCCESSFUL: return successful_1.default(code);
             case class_1.default.CLIENT_ERROR: return client_error_1.default(code);
             case class_1.default.SERVER_ERROR: return server_error_1.default(code);

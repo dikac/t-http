@@ -5,9 +5,16 @@ import Successful from "./successful";
 import Informational from "./informational";
 import Redirection from "./redirection";
 
-export default function ClassCode(code : number, class_ : Class) : boolean {
+/**
+ * check if {@param code} is part of {@param status} http status code class
+ *
+ * @param code
+ * @param status
+ */
 
-    switch (class_) {
+export default function ClassCode(code : number, status : Class) : boolean {
+
+    switch (status) {
         case Class.SUCCESSFUL : return Successful(code);
         case Class.CLIENT_ERROR : return ClientError(code);
         case Class.SERVER_ERROR : return ServerError(code);
