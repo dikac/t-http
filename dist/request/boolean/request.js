@@ -1,31 +1,18 @@
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+import String from "@dikac/t-string/boolean/string";
+import Property from "@dikac/t-object/property/boolean/exists";
+import Object_ from "@dikac/t-object/boolean/object";
+import Enum from "@dikac/t-enum/boolean/enum";
+import Method from "../method/method/method";
+export default function Request(value) {
+    if (!Property(value, 'header') || !Object_(value.header)) {
+        return false;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "@dikac/t-string/boolean/string", "@dikac/t-object/property/boolean/exists", "@dikac/t-object/boolean/object", "@dikac/t-enum/boolean/enum", "../method/method/method"], factory);
+    if (!Property(value, 'path') || !String(value.path)) {
+        return false;
     }
-})(function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    const string_1 = require("@dikac/t-string/boolean/string");
-    const exists_1 = require("@dikac/t-object/property/boolean/exists");
-    const object_1 = require("@dikac/t-object/boolean/object");
-    const enum_1 = require("@dikac/t-enum/boolean/enum");
-    const method_1 = require("../method/method/method");
-    function Request(value) {
-        if (!exists_1.default(value, 'header') || !object_1.default(value.header)) {
-            return false;
-        }
-        if (!exists_1.default(value, 'path') || !string_1.default(value.path)) {
-            return false;
-        }
-        if (!exists_1.default(value, 'method') || !enum_1.default(value.method, method_1.default)) {
-            return false;
-        }
-        return true;
+    if (!Property(value, 'method') || !Enum(value.method, Method)) {
+        return false;
     }
-    exports.default = Request;
-});
+    return true;
+}
 //# sourceMappingURL=request.js.map

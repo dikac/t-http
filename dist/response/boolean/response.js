@@ -1,32 +1,19 @@
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+import Property from "@dikac/t-object/property/boolean/exists";
+import Number from "@dikac/t-number/boolean/number";
+import Code from "@dikac/t-code/boolean/code";
+import Message from "@dikac/t-message/boolean/message";
+import String from "@dikac/t-string/boolean/string";
+import Object_ from "@dikac/t-object/boolean/object";
+export default function Response(value) {
+    if (!Code(value) || !Number(value.code)) {
+        return false;
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "@dikac/t-object/property/boolean/exists", "@dikac/t-number/boolean/number", "@dikac/t-code/boolean/code", "@dikac/t-message/boolean/message", "@dikac/t-string/boolean/string", "@dikac/t-object/boolean/object"], factory);
+    if (!Message(value) || !String(value.message)) {
+        return false;
     }
-})(function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    const exists_1 = require("@dikac/t-object/property/boolean/exists");
-    const number_1 = require("@dikac/t-number/boolean/number");
-    const code_1 = require("@dikac/t-code/boolean/code");
-    const message_1 = require("@dikac/t-message/boolean/message");
-    const string_1 = require("@dikac/t-string/boolean/string");
-    const object_1 = require("@dikac/t-object/boolean/object");
-    function Response(value) {
-        if (!code_1.default(value) || !number_1.default(value.code)) {
-            return false;
-        }
-        if (!message_1.default(value) || !string_1.default(value.message)) {
-            return false;
-        }
-        if (!exists_1.default(value, 'header') || !object_1.default(value.header)) {
-            return false;
-        }
-        return true;
+    if (!Property(value, 'header') || !Object_(value.header)) {
+        return false;
     }
-    exports.default = Response;
-});
+    return true;
+}
 //# sourceMappingURL=response.js.map
