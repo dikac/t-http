@@ -6,7 +6,7 @@ it("force console log", () => { spyOn(console, 'log').and.callThrough();});
 
 it('plain', () => {
 
-    expect(Request({path:'', method:Method.PATCH, header:{}})).toBe(true)
+    expect(Request({path:'', method:Method.PATCH, headers:{}})).toBe(true)
 
 });
 

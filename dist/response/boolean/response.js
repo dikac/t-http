@@ -11,7 +11,7 @@ export default function Response(value) {
     if (!Message(value) || !String(value.message)) {
         return false;
     }
-    if (!Property(value, 'header') || !Object_(value.header)) {
+    if (!Property(value, 'headers') || !Object_(value.headers)) {
         return false;
     }
     return true;

@@ -18,7 +18,7 @@ export default function Response(value : object) : value is ResponseInterface {
         return false;
     }
 
-    if(!Property(value, 'header') || !Object_(value.header)) {
+    if(!Property(value, 'headers') || !Object_(value.headers)) {
 
         return false;
     }

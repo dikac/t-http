@@ -7,7 +7,7 @@ import Method from "../method/method/method";
 
 export default function Request(value : object) : value is RequestInterface {
 
-    if(!Property(value, 'header') || !Object_(value.header)) {
+    if(!Property(value, 'headers') || !Object_(value.headers)) {
 
         return false;
     }

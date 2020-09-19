@@ -6,7 +6,7 @@ it("force console log", () => { spyOn(console, 'log').and.callThrough();});
 
 it('plain', () => {
 
-    expect(Response({code:1, message:'', header:{}})).toBe(true)
+    expect(Response({code:1, message:'', headers:{}})).toBe(true)
 
 });
 
