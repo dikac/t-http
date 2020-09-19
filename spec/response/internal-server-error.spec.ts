@@ -14,7 +14,7 @@ describe("compiler compatible", function() {
 
         let string : string;
 
-        string = response.header.etag;
+        string = response.headers.etag;
         string = response.body;
 
         let number : number = response.code;
@@ -29,7 +29,7 @@ describe("compiler compatible", function() {
         let string : string;
         let object : object;
 
-        object = response.header;
+        object = response.headers;
         string = response.body;
 
         let number : number = response.code;
@@ -45,7 +45,7 @@ describe("validate data", function() {
 
         let response = InternalServerError('data', {etag:'etag data'});
 
-        expect(response.header.etag).toBe('etag data');
+        expect(response.headers.etag).toBe('etag data');
         expect(response.body).toBe('data');
         expect(response.code).toBe(500);
         expect(response.message).toBe(Standard(500));
@@ -56,7 +56,7 @@ describe("validate data", function() {
 
         let response = InternalServerError('data');
 
-        expect(response.header).toEqual({});
+        expect(response.headers).toEqual({});
         expect(response.body).toBe('data');
         expect(response.code).toBe(500);
         expect(response.message).toBe(Standard(500));

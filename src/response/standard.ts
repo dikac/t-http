@@ -3,14 +3,14 @@ import Response from "./response";
 export default class Standard<
     Code extends number,
     Message extends string,
-    Header extends Record<string, string>,
+    Headers extends Record<string, string>,
     Body
-> implements Response<Code, Message, Header, Body> {
+> implements Response<Code, Message, Headers, Body> {
 
     constructor(
         public code : Code,
         public message : Message,
-        public header : Header,
+        public headers : Headers,
         public body : Body
     ) {
 

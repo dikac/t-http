@@ -1,8 +1,8 @@
 export default class Standard {
-    constructor(method, path, header, body) {
+    constructor(method, path, headers, body) {
         this.method = method;
         this.path = path;
-        this.header = header;
+        this.headers = headers;
         this.body = body;
     }
 }

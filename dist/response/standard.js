@@ -1,8 +1,8 @@
 export default class Standard {
-    constructor(code, message, header, body) {
+    constructor(code, message, headers, body) {
         this.code = code;
         this.message = message;
-        this.header = header;
+        this.headers = headers;
         this.body = body;
     }
 }
