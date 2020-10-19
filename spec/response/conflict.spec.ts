@@ -36,7 +36,6 @@ describe("compiler compatible", function() {
         string = response.message;
 
     });
-
 });
 
 describe("validate data", function() {

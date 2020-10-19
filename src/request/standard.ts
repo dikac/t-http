@@ -12,9 +12,7 @@ export default class Standard<
         public method : Method,
         public path : Path,
         public headers : Headers,
-        public body : Body,
-    ) {
-
-    }
+        public body : Body
+    ) {}
 }
 

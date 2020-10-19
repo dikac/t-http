@@ -12,8 +12,6 @@ export default class Standard<
         public message : Message,
         public headers : Headers,
         public body : Body
-    ) {
-
-    }
+    ) {}
 }
 

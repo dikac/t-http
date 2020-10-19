@@ -5,9 +5,9 @@ import Standard from "./standard";
 export default function Ok<Body, Headers extends Record<string, string>>
     (body : Body, header : Headers) : Response<200, string, Headers, Body>;
 export default function Ok<Body>
-    (body : Body) : Response<200, string, {}, Body>;
+    (body : Body) : Response<200, string, Record<string, string>, Body>;
 export default function Ok
-    () : Response<200, string, {}, undefined>;
+    () : Response<200, string, Record<string, string>, undefined>;
 export default function Ok<
     Body,
     Headers extends Record<string, string>
