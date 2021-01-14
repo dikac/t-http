@@ -6,7 +6,7 @@ export default function InternalServerError<
     Body,
     Headers extends Record<string, string>
 >(
-    response : Partial<Omit<Response<number, Message, Headers, Body>, 'code'>>,
+    response : Partial<Omit<Response<number, Message, Headers, Body>, 'code'>> = {},
 ) : Response<500, Message, Headers, Body> {
 
     return DefaultMessage({...response, code: 500});

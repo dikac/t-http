@@ -9,7 +9,7 @@ export default function Post<
     Body,
     Path extends string,
     Headers extends Record<string, string>
-    >(
+>(
     request : PathInterface<Path> & HeaderInterface<Headers> & BodyInterface<Body>,
 ) : Request<Method.POST, Path, Headers, Body> {
 
