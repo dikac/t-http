@@ -1,6 +1,5 @@
-import StandardCode from "./message/message/standard";
-import Standard from "./standard";
-export default function Unauthorized(body, header) {
-    return new Standard(401, StandardCode(401), header ? header : {}, body);
+import DefaultMessage from "./default-message";
+export default function Unauthorized(response) {
+    return DefaultMessage(Object.assign(Object.assign({}, response), { code: 401 }));
 }
 //# sourceMappingURL=unauthorized.js.map

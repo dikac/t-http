@@ -1,6 +1,5 @@
-import StandardCode from "./message/message/standard";
-import Standard from "./standard";
-export default function BadRequest(body, header) {
-    return new Standard(400, StandardCode(400), header ? header : {}, body);
+import DefaultMessage from "./default-message";
+export default function BadRequest(response) {
+    return DefaultMessage(Object.assign(Object.assign({}, response), { code: 400 }));
 }
 //# sourceMappingURL=bad-request.js.map

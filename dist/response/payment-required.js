@@ -1,6 +1,5 @@
-import StandardCode from "./message/message/standard";
-import Standard from "./standard";
-export default function PaymentRequired(body, header) {
-    return new Standard(402, StandardCode(402), header ? header : {}, body);
+import DefaultMessage from "./default-message";
+export default function PaymentRequired(response) {
+    return DefaultMessage(Object.assign(Object.assign({}, response), { code: 402 }));
 }
 //# sourceMappingURL=payment-required.js.map

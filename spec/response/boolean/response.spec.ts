@@ -13,6 +13,6 @@ it('plain', () => {
 
 it('class', () => {
 
-    expect(Response(Ok(undefined))).toBe(true)
+    expect(Response(Ok({body:undefined}))).toBe(true)
 
 });

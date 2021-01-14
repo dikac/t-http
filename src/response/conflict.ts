@@ -1,21 +1,13 @@
 import Response from "./response";
-import StandardCode from "./message/message/standard";
-import Standard from "./standard";
+import DefaultMessage from "./default-message";
 
-export default function Conflict<Body, Headers extends Record<string, string>>
-    (body : Body, header : Headers) : Response<409, string, Headers, Body>;
-export default function Conflict<Body>
-    (body : Body) : Response<409, string, Record<string, string>, Body>;
-export default function Conflict
-() : Response<409, string, Record<string, string>, undefined>;
 export default function Conflict<
+    Message extends string,
     Body,
     Headers extends Record<string, string>
 >(
-    body ?: Body,
-    header ?: Headers
-) : Response<409, string, Headers|{}, undefined|Body> {
+    response : Partial<Omit<Response<number, Message, Headers, Body>, 'code'>>,
+) : Response<409, Message, Headers, Body> {
 
-    return new Standard(409, StandardCode(409), header ? header : {}, body);
+    return DefaultMessage({...response, code: 409});
 }
-

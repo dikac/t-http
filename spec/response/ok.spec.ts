@@ -9,7 +9,10 @@ describe("compiler compatible", function() {
 
     describe("header", function() {
 
-        let response = Ok('data', {etag:'etag data'});
+        let response = Ok({
+            body:'data',
+            headers:{etag:'etag data'}
+        });
 
 
         let string : string;
@@ -24,7 +27,9 @@ describe("compiler compatible", function() {
 
     describe("header", function() {
 
-        let response = Ok('data');
+        let response = Ok({
+            body:'data'
+        });
 
         let string : string;
         let object : object;
@@ -43,7 +48,10 @@ describe("validate data", function() {
 
     it("header", function() {
 
-        let response = Ok('data', {etag:'etag data'});
+        let response = Ok({
+            body:'data',
+            headers:{etag:'etag data'}
+        });
 
         expect(response.headers.etag).toBe('etag data');
         expect(response.body).toBe('data');
@@ -54,7 +62,9 @@ describe("validate data", function() {
 
     it("header", function() {
 
-        let response = Ok('data');
+        let response = Ok({
+            body:'data'
+        });
 
         expect(response.headers).toEqual({});
         expect(response.body).toBe('data');

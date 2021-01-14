@@ -1,6 +1,5 @@
-import StandardCode from "./message/message/standard";
-import Standard from "./standard";
-export default function ServiceUnavailable(body, header) {
-    return new Standard(503, StandardCode(503), header ? header : {}, body);
+import DefaultMessage from "./default-message";
+export default function ServiceUnavailable(response) {
+    return DefaultMessage(Object.assign(Object.assign({}, response), { code: 503 }));
 }
 //# sourceMappingURL=service-unavailable.js.map

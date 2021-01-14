@@ -1,4 +1,2 @@
 import Response from "./response";
-export default function UnprocessableEntity<Body, Headers extends Record<string, string>>(body: Body, header: Headers): Response<422, string, Headers, Body>;
-export default function UnprocessableEntity<Body>(body: Body): Response<422, string, Record<string, string>, Body>;
-export default function UnprocessableEntity(): Response<422, string, Record<string, string>, undefined>;
+export default function UnprocessableEntity<Message extends string, Body, Headers extends Record<string, string>>(response: Partial<Omit<Response<number, Message, Headers, Body>, 'code'>>): Response<422, Message, Headers, Body>;

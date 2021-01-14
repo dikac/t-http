@@ -1,21 +1,14 @@
 import Response from "./response";
-import StandardCode from "./message/message/standard";
-import Standard from "./standard";
+import DefaultMessage from "./default-message";
 
-export default function InternalServerError<Body, Headers extends Record<string, string>>
-    (body : Body, header : Headers) : Response<500, string, Headers, Body>;
-export default function InternalServerError<Body>
-    (body : Body) : Response<500, string, Record<string, string>, Body>;
-export default function InternalServerError
-    () : Response<500, string, Record<string, string>, undefined>;
 export default function InternalServerError<
+    Message extends string,
     Body,
     Headers extends Record<string, string>
 >(
-    body ? : Body,
-    header ?: Headers
-) : Response<500, string, Headers|{}, undefined|Body> {
+    response : Partial<Omit<Response<number, Message, Headers, Body>, 'code'>>,
+) : Response<500, Message, Headers, Body> {
 
-    return new Standard(500, StandardCode(500), header ? header : {}, body);
+    return DefaultMessage({...response, code: 500});
 }
 

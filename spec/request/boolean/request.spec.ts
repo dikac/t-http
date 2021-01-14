@@ -13,6 +13,6 @@ it('plain', () => {
 
 it('class', () => {
 
-    expect(Request(Get(undefined, ''))).toBe(true)
+    expect(Request(Get({path:''}))).toBe(true)
 
 });

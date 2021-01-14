@@ -1,6 +1,5 @@
-import StandardCode from "./message/message/standard";
-import Standard from "./standard";
-export default function Created(body, header) {
-    return new Standard(201, StandardCode(201), header ? header : {}, body);
+import DefaultMessage from "./default-message";
+export default function Created(response) {
+    return DefaultMessage(Object.assign(Object.assign({}, response), { code: 201 }));
 }
 //# sourceMappingURL=created.js.map

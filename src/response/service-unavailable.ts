@@ -1,21 +1,13 @@
 import Response from "./response";
-import StandardCode from "./message/message/standard";
-import Standard from "./standard";
+import DefaultMessage from "./default-message";
 
-export default function ServiceUnavailable<Body, Headers extends Record<string, string>>
-    (body : Body, header : Headers) : Response<503, string, Headers, Body>;
-export default function ServiceUnavailable<Body>
-    (body : Body) : Response<503, string, Record<string, string>, Body>;
-export default function ServiceUnavailable
-    () : Response<503, string, Record<string, string>, undefined>;
 export default function ServiceUnavailable<
+    Message extends string,
     Body,
     Headers extends Record<string, string>
->(
-    body ? : Body,
-    header ?: Headers
-) : Response<503, string, Headers|{}, undefined|Body> {
+    >(
+    response : Partial<Omit<Response<number, Message, Headers, Body>, 'code'>>,
+) : Response<503, Message, Headers, Body> {
 
-    return new Standard(503, StandardCode(503), header ? header : {}, body);
+    return DefaultMessage({...response, code: 503});
 }
-
