@@ -9,7 +9,8 @@
     "@dikac/t-map": "^0.10.6",
     "@dikac/t-message": "^0.11.2",
     "@dikac/t-number": "^0.16.4",
-    "@dikac/t-object": "^0.36.6",
+    "@dikac/t-object": "^0.36.7",
+    "@dikac/t-array": "^0.25.13",
     "@dikac/t-string": "^0.15.3"
   },
   "devDependencies": {
